@@ -1,0 +1,6 @@
+bases:
+- ../../base
+
+images:
+- name: ghcr.io/home-assistant/home-assistant
+  newTag: stable
