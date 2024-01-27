@@ -1,4 +1,4 @@
-defaultNamespace: home-assistant
+defaultNamespace: homeassistant
 
 kustomize:
   dir: ""

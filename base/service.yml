@@ -7,7 +7,7 @@ metadata:
   labels:
     app: home-assistant
   name: ha-lb-svc
-  namespace: home-assistant
+  namespace: homeassistant
 spec:
   ports:
   - port: 80
