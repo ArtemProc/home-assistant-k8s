@@ -2,13 +2,17 @@
 Home-Assistant Kustomize using Fleet
 
 ```
-kind: GitRepo
 apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
 metadata:
-  name: kustomize
-  namespace: fleet-local
+  name: home-assistant
+  namespace: fleet-default
+  labels:
+    home-assistant: enabled
 spec:
+  branch: main
+  clientSecretName: auth-hp48c
   repo: https://github.com/NicoOosterwijk/home-assistant-k8s.git
-  paths:
-  - ./kustomize
+  targets:
+    - clusterGroup: home-assistant
 ```
