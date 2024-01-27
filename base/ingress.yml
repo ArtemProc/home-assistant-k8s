@@ -1,0 +1,25 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ha-ingress
+  namespace: home-assistant
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+#    cert-manager.io/cluster-issuer: cert-manager-webhook-duckdns-production
+spec:
+  tls:
+  - hosts:
+    - ha.digitalinfo.local
+    secretName: homeassistant-certs
+  rules:
+  - host: ha.digitalinfo.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: ha-lb-svc
+            port:
+              name: "http"

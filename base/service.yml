@@ -1,0 +1,21 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: ha.digitalinfo.local
+  labels:
+    app: home-assistant
+  name: ha-lb-svc
+  namespace: home-assistant
+spec:
+  ports:
+  - port: 80
+    targetPort: 8123
+    protocol: TCP
+    name: http
+  selector:
+    app: home-assistant
+  sessionAffinity: None
+  type: LoadBalancer
+  loadBalancerIP: 192.168.2.222
