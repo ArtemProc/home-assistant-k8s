@@ -4,8 +4,12 @@ kind: Deployment
 metadata:
   labels:
     app: home-assistant
+    app.kubernetes.io/managed-by: Helm
   name: home-assistant
   namespace: homeassistant
+  annotations:
+    meta.helm.sh/release-name: home-assistant
+    meta.helm.sh/release-namespace: homeassistant
 spec:
   revisionHistoryLimit: 3
   replicas: 1
