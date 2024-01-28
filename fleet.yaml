@@ -1,6 +1,6 @@
 defaultNamespace: homeassistant
 
-namespaceLabels:
+labels:
   app.kubernetes.io/managed-by: Helm
 
 namespaceAnnotations:
