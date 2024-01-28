@@ -2,6 +2,11 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    meta.helm.sh/release-name: home-assistant
+    meta.helm.sh/release-namespace: homeassistant
   name: home-assistant-config
   namespace: homeassistant
 data:
