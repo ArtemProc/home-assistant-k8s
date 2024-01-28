@@ -1,9 +1,9 @@
 resources:
 - namespace.yaml
-- deployment.yml
-- ingress.yml
 - persistent-volume-claim.yml
+- deployment.yml
 - service.yml
+- ingress.yml
 commonLabels:
   app.kubernetes.io/name: home-assistant
   app: home-assistant
