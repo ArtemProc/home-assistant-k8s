@@ -4,18 +4,9 @@ kind: Ingress
 metadata:
   name: ha-ingress
   namespace: homeassistant
-  labels:
-    app.kubernetes.io/managed-by: Helm
   annotations:
-    meta.helm.sh/release-name: home-assistant
-    meta.helm.sh/release-namespace: homeassistant
     kubernetes.io/ingress.class: "nginx"
-#    cert-manager.io/cluster-issuer: cert-manager-webhook-duckdns-production
 spec:
-  tls:
-  - hosts:
-    - ha.digitalinfo.local
-    secretName: homeassistant-certs
   rules:
   - host: ha.digitalinfo.local
     http:
@@ -24,6 +15,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: ha-lb-svc
+            name: ha-svc
             port:
-              name: "http"
+              name: http
