@@ -1,11 +1,4 @@
 defaultNamespace: homeassistant
-
-labels:
-  app.kubernetes.io/managed-by: Helm
-
-namespaceAnnotations:
-  meta.helm.sh/release-name: home-assistant
-  meta.helm.sh/release-namespace: homeassistant
   
 kustomize:
   dir: ""
