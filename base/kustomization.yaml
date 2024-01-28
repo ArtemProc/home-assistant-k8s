@@ -10,5 +10,5 @@ commonLabels:
   app.kubernetes.io/managed-by: Helm
   app: home-assistant
 commonAnnotations:
-  meta.helm.sh/release-name: home-assistan
+  meta.helm.sh/release-name: home-assistant
   meta.helm.sh/release-namespace: homeassistant
