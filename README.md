@@ -11,7 +11,6 @@ metadata:
     home-assistant: enabled
 spec:
   branch: main
-  clientSecretName: auth-hp48c
   repo: https://github.com/NicoOosterwijk/home-assistant-k8s.git
   targets:
     - clusterGroup: home-assistant
