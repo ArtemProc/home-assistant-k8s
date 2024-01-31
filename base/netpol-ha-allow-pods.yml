@@ -1,0 +1,27 @@
+---
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: ha-allow-external
+  namespace: homeassistant
+spec:
+  podSelector:
+    matchLabels:
+      app: home-assistant
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: esphome
+    - podSelector:
+        matchLabels:
+          app: frigate
+    - podSelector:
+        matchLabels:
+          app: mosquitto
+    - podSelector:
+        matchLabels:
+          app: node-red
+    - podSelector:
+        matchLabels:
+          app: zigbee2mqtt
