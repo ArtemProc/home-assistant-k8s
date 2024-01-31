@@ -1,0 +1,10 @@
+---
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: deny-all-ingress
+  namespace: homeassistant
+spec:
+  podSelector: {}
+  policyTypes:
+  - Ingress
