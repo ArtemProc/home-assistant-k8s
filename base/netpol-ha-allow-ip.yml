@@ -1,0 +1,19 @@
+---
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: ha-allow-ip
+  namespace: homeassistant
+spec:
+  podSelector:
+    matchLabels:
+      app: home-assistant
+  ingress:
+  - from:
+    - ipBlock:
+        cidr: 192.168.2.0/24
+    ports:
+    - port: 8123
+      protocol: TCP
+    policyTypes:
+    - Ingress

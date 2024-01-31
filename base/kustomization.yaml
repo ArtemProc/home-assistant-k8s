@@ -8,3 +8,4 @@ resources:
 #- netpol-ha-allow-external.yml
 #- netpol-ha-allow-pods.yml
 - netpol-ha-allow-namespaces.yml
+- netpol-ha-allow-ip.yml
