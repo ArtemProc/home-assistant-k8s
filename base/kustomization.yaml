@@ -1,15 +1,7 @@
 resources:
-- namespace.yaml
 - cm.yaml
 - persistent-volume-claim.yml
 - deployment.yml
 - service.yml
 - ingress.yml
-- netpol-deny-all-ingress.yaml
-commonLabels:
-  app.kubernetes.io/name: home-assistant
-  app.kubernetes.io/managed-by: Helm
-  app: home-assistant
-commonAnnotations:
-  meta.helm.sh/release-name: home-assistant
-  meta.helm.sh/release-namespace: homeassistant
+- netpol-deny-all-ingress.yml
