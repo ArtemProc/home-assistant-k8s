@@ -9,10 +9,6 @@ spec:
   replicas: 1
   strategy:
     type: Recreate
-  template:
-    metadata:
-      labels:
-        app: home-assistant
     spec:
 #      securityContext:
 #        fsGroup: 33
