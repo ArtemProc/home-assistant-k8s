@@ -1,0 +1,14 @@
+---
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: web-allow-external
+  namespace: homeassistant
+spec:
+  podSelector:
+    matchLabels:
+      app: home-assistant
+  ingress:
+  - {}
+  policyTypes:
+  - Ingress
