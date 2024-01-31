@@ -5,6 +5,7 @@ resources:
 - deployment.yml
 - service.yml
 - ingress.yml
+- netpol-deny-all-ingress.yaml
 commonLabels:
   app.kubernetes.io/name: home-assistant
   app.kubernetes.io/managed-by: Helm
