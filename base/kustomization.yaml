@@ -5,3 +5,4 @@ resources:
 - service.yml
 - ingress.yml
 - netpol-deny-all-ingress.yml
+- netpol-ha-allow-external.yml
