@@ -8,5 +8,7 @@ spec:
   podSelector:
     matchLabels:
       app: home-assistant
+  ingress:
+  - {}
   policyTypes:
   - Ingress
