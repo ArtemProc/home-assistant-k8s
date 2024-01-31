@@ -2,12 +2,10 @@
 kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
 metadata:
-  name: ha-deny-all
+  name: ingress-deny-all
   namespace: homeassistant
 spec:
   podSelector: {}
-  matchLabels:
-    app: home-assistant
   ingress:
   - {}
   policyTypes:
