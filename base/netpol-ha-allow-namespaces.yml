@@ -1,0 +1,27 @@
+---
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: ha-allow-pods
+  namespace: homeassistant
+spec:
+  podSelector:
+    matchLabels:
+      app: home-assistant
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          name: esphome
+    - namespaceSelector:
+        matchLabels:
+          name: frigate
+    - namespaceSelector:
+        matchLabels:
+          name: mosquitto
+    - namespaceSelector:
+        matchLabels:
+          name: node-red
+    - namespaceSelector:
+        matchLabels:
+          name: zigbee2mqtt
