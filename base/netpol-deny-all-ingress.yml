@@ -6,8 +6,8 @@ metadata:
   namespace: homeassistant
 spec:
   podSelector: {}
-    matchLabels:
-      app: home-assistant
+  matchLabels:
+    app: home-assistant
   ingress:
   - {}
   policyTypes:
