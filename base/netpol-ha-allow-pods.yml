@@ -39,16 +39,16 @@ spec:
           - key: name
             operator: In
             values:
-              - node-red
+              - zigbee2mqtt
         matchLabels:
-          name: node-red
+          name: zigbee2mqtt
     - namespaceSelector:
         matchExpressions:
           - key: name
             operator: In
             values:
-              - zigbee2mqtt
+              - esphome
         matchLabels:
-          name: zigbee2mqtt
+          name: esphome
   policyTypes:
   - Ingress
