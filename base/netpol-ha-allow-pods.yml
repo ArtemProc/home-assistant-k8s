@@ -10,45 +10,45 @@ spec:
       app: home-assistant
   ingress:
   - from:
-        - namespaceSelector:
-            matchExpressions:
-              - key: name
-                operator: In
-                values:
-                  - frigate
-            matchLabels:
-              name: frigate
-        - namespaceSelector:
-            matchExpressions:
-              - key: name
-                operator: In
-                values:
-                  - node-red
-            matchLabels:
-              name: node-red
-        - namespaceSelector:
-            matchExpressions:
-              - key: name
-                operator: In
-                values:
-                  - mosquitto
-            matchLabels:
-              name: mosquitto
-        - namespaceSelector:
-            matchExpressions:
-              - key: name
-                operator: In
-                values:
-                  - node-red
-            matchLabels:
-              name: node-red
-        - namespaceSelector:
-            matchExpressions:
-              - key: name
-                operator: In
-                values:
-                  - zigbee2mqtt
-            matchLabels:
-              name: zigbee2mqtt
+    - namespaceSelector:
+        matchExpressions:
+          - key: name
+            operator: In
+            values:
+              - frigate
+        matchLabels:
+          name: frigate
+    - namespaceSelector:
+        matchExpressions:
+          - key: name
+            operator: In
+            values:
+              - node-red
+        matchLabels:
+          name: node-red
+    - namespaceSelector:
+        matchExpressions:
+          - key: name
+            operator: In
+            values:
+              - mosquitto
+        matchLabels:
+          name: mosquitto
+    - namespaceSelector:
+        matchExpressions:
+          - key: name
+            operator: In
+            values:
+              - node-red
+        matchLabels:
+          name: node-red
+    - namespaceSelector:
+        matchExpressions:
+          - key: name
+            operator: In
+            values:
+              - zigbee2mqtt
+        matchLabels:
+          name: zigbee2mqtt
   policyTypes:
   - Ingress
