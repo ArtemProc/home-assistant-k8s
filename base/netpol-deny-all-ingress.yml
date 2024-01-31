@@ -5,8 +5,6 @@ metadata:
   name: default-deny-ingress
   namespace: homeassistant
 spec:
-  podSelector:
-    matchLabels:
-      app: home-assistant
+  podSelector: {}
   policyTypes:
   - Ingress
