@@ -25,3 +25,5 @@ spec:
     - podSelector:
         matchLabels:
           app: zigbee2mqtt
+  policyTypes:
+  - Ingress

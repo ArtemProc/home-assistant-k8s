@@ -25,3 +25,8 @@ spec:
     - namespaceSelector:
         matchLabels:
           name: zigbee2mqtt
+    ports:
+    - port: 8123
+      protocol: TCP
+    policyTypes:
+    - Ingress
