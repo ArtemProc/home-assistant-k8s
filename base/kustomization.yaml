@@ -4,6 +4,6 @@ resources:
 - deployment.yml
 - service.yml
 - ingress.yml
-- netpol-deny-all-ingress.yml
-- netpol-ha-allow-namespaces.yml
-- netpol-ha-allow-ip.yml
+#- netpol-deny-all-ingress.yml
+#- netpol-ha-allow-namespaces.yml
+#- netpol-ha-allow-ip.yml
