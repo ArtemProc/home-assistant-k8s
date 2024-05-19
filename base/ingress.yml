@@ -15,6 +15,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: ha-lb-svc
+            name: ha-svc
             port:
               name: http
