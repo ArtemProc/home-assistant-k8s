@@ -2,7 +2,7 @@ resources:
 - cm.yaml
 - persistent-volume-claim.yml
 - deployment.yml
-- service.yaml
+- service.yml
 - ingress.yml
 #- netpol-deny-all-ingress.yml
 #- netpol-ha-allow-namespaces.yml
